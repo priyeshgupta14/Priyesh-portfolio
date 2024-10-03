@@ -12,7 +12,7 @@ import { Transition } from 'components/Transition';
 import { Fragment, useState } from 'react';
 import { media } from 'utils/style';
 import styles from './Profile.module.css';
-import myImage from 'assets/mayank.jpg';
+import myImage from 'assets/Vinayak.jpg';
 
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
@@ -20,7 +20,7 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I&apos;m Mayank, currently enrolled at{' '}
+      I&apos;m Vinayak, currently enrolled at{' '}
       <Link href="https://kiit.ac.in">KIIT University</Link> to pursue an engineering
       degree in Information Technology. My area of expertise in web development is the
       MERN stack. As a self-taught developer, I&apos;m constantly searching for ways to

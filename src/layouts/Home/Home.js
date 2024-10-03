@@ -73,7 +73,7 @@ export const Home = () => {
     <div className={styles.home}>
       <Meta
         title="Designer + Developer"
-        description="Design portfolio of Mayank Jain — a product designer working on web & mobile
+        description="Design portfolio of Vinayak — a product designer working on web & mobile
           apps with a focus on motion, experience design, and accessibility."
       />
       <Intro
@@ -90,7 +90,7 @@ export const Home = () => {
         title="Hostel Management System"
         description="A platform for students to address all their hostel issues with their hostel warden"
         buttonText="View project"
-        buttonLink="https://github.com/mayankjain25/Hostel-Management-System"
+        buttonLink="https://github.com/Vinayakjain25/Hostel-Management-System"
         model={{
           type: 'laptop',
           alt: 'Displaying the home page of the website.',
@@ -111,7 +111,7 @@ export const Home = () => {
         title="Blockchain Based FIR Registration System"
         description="A blockchain based FIR registration system to ensure transparency and security of the data to facilitate and safeguard the interests of the victim."
         buttonText="Visit repository"
-        buttonLink="https://github.com/mayankjain25/Blockchain-Based-FIR-System"
+        buttonLink="https://github.com/Vinayakjain25/Blockchain-Based-FIR-System"
         model={{
           type: 'laptop',
           alt: 'landing page',
@@ -131,7 +131,7 @@ export const Home = () => {
         title="CI/CD Pipeline using Jenkins and Docker"
         description="his is a basic starter website that was built incorporating a CI/CD Pipeline involving GitHub Webhooks and Jenkins. Every push is deployed via an nginx docker container"
         buttonText="View project"
-        buttonLink="https://github.com/mayankjain25/Microo-Starter-Website"
+        buttonLink="https://github.com/Vinayakjain25/Microo-Starter-Website"
         model={{
           type: 'laptop',
           alt: 'Visual description of the pipeline workflow',
