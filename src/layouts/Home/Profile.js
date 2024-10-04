@@ -12,7 +12,7 @@ import { Transition } from 'components/Transition';
 import { Fragment, useState } from 'react';
 import { media } from 'utils/style';
 import styles from './Profile.module.css';
-import myImage from 'assets/Vinayak.jpg';
+import myImage from 'assets/profpic.jpg';
 
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
