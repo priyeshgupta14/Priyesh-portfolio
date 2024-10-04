@@ -87,10 +87,10 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Hostel Management System"
-        description="A platform for students to address all their hostel issues with their hostel warden"
+        title="Emotional Monitoring of Crypto Traders"
+        description="Developed a cryptocurrency trading platform that monitors emotional well-being and provides personalized interventions to enhance user decision-making."
         buttonText="View project"
-        buttonLink="https://github.com/Vinayakjain25/Hostel-Management-System"
+        buttonLink="https://github.com/hackfest-dev/HF24-Nexus"
         model={{
           type: 'laptop',
           alt: 'Displaying the home page of the website.',
@@ -108,10 +108,10 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Blockchain Based FIR Registration System"
-        description="A blockchain based FIR registration system to ensure transparency and security of the data to facilitate and safeguard the interests of the victim."
+        title="Online Schooling for the Specially Abled"
+        description="Developed an adaptive online learning platform for specially-abled students using computer vision, winning first place in a hackathon for building it in 48 hours."
         buttonText="Visit repository"
-        buttonLink="https://github.com/Vinayakjain25/Blockchain-Based-FIR-System"
+        buttonLink="https://github.com/PlatJack/DRS-Hackathon-2"
         model={{
           type: 'laptop',
           alt: 'landing page',
@@ -149,10 +149,10 @@ export const Home = () => {
         sectionRef={projectFour}
         visible={visibleSections.includes(projectFour.current)}
         index={4}
-        title="Stocks Dashboard"
-        description="A dashboard to display some of the top performing stocks in the Indian market"
-        buttonText="View website"
-        buttonLink="http://stock-dashboard.kiitians.com/"
+        title="Alumni Connect"
+        description="Designed a Flutter app for CGC IIIT Dharwad that fosters alumni engagement, featuring social media-style image sharing, job postings, and job application capabilities."
+        buttonText="View repository"
+        buttonLink="https://github.com/NVJKKartik/Alumni_connect"
         model={{
           type: 'phone',
           alt: 'App login screen',
