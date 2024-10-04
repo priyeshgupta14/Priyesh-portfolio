@@ -25,17 +25,12 @@ export const navLinks = [
 export const socialLinks = [
   {
     label: 'Github',
-    url: 'https://github.com/Vinayakjain25',
+    url: 'https://github.com/VinayakRai5',
     icon: 'github',
   },
   {
     label: 'Linkedin',
-    url: 'https://www.linkedin.com/in/Vinayak-jain-688409208/',
+    url: 'https://www.linkedin.com/in/vinayak-rai-44773b159',
     icon: 'linkedin',
-  },
-  {
-    label: 'Leetcode',
-    url: 'https://leetcode.com/jainVinayak2509/',
-    icon: 'leetcode',
   },
 ];
