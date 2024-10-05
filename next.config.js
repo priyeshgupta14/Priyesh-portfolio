@@ -1,4 +1,7 @@
 module.exports = {
+  experimental: {
+    esmExternals: true,
+  },
   images: {
     loader: 'akamai',
     path: '',
