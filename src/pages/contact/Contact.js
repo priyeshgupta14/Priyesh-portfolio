@@ -15,75 +15,46 @@ import { cssProps, msToNum, numToMs } from 'utils/style';
 import styles from './Contact.module.css';
 import emailjs from '@emailjs/browser';
 
+const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
 export const Contact = () => {
   const form = useRef();
-  // const errorRef = useRef();
   const email = useFormInput('');
   const message = useFormInput('');
-
   const [sending, setSending] = useState(false);
   const [complete, setComplete] = useState(false);
-  // const [statusError, setStatusError] = useState('');
+  const [statusError, setStatusError] = useState(null);
   const initDelay = tokens.base.durationS;
 
-  const onSubmit = async event => {
+  const onSubmit = async (event) => {
     event.preventDefault();
-    // setStatusError('');
 
     if (sending) return;
+    setSending(true);
+    setStatusError(null); 
 
     try {
-      setSending(true);
-
-      // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/message`, {
-      //   method: 'POST',
-      //   mode: 'cors',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({
-      //     email: email.value,
-      //     message: message.value,
-      //   }),
-      // });
-      // console.log(form.current);
-      emailjs
-        .sendForm(
-          'service_nazmh8l',
-          'template_g5tsvbh',
-          form.current,
-          'F0PrBEbycNEQrkIFx'
-        )
-        .then(res => {
-          // setSenderEmail('');
-          // setSenderMsg('');
-          console.log(res);
-        });
-
-      // const responseMessage = await response.json();
-
-      // const statusError = getStatusError({
-      //   status: response?.status,
-      //   errorMessage: responseMessage?.error,
-      //   fallback: 'There was a problem sending your message',
-      // });
-
-      // if (statusError) throw new Error(statusError);
-
+      const result = await emailjs.sendForm(
+        serviceID,  // Replace with your service ID
+        templateID, // Replace with your template ID
+        form.current,
+        publicKey  // Replace with your public key
+      );
+      console.log('Email sent successfully:', result);
       setComplete(true);
-      setSending(false);
     } catch (error) {
-      // setSending(false);
-      // setStatusError(error.message);
+      console.error('Error sending email:', error);
+      setStatusError('There was an error sending your message. Please try again.');
+    } finally {
+      setSending(false);
     }
   };
 
   return (
     <Section className={styles.contact}>
-      <Meta
-        title="Contact"
-        description="Send me a message if you’re interested in discussing a project or if you just want to say hi"
-      />
+      <Meta title="Contact" description="Send me a message" />
       <Transition unmount in={!complete} timeout={1600}>
         {(visible, status) => (
           <form className={styles.form} ref={form} onSubmit={onSubmit}>
@@ -105,7 +76,7 @@ export const Contact = () => {
               required
               className={styles.input}
               data-status={status}
-              name="user_email"
+              name="from_name"  // Important: Match the field name in your EmailJS template.
               style={getDelay(tokens.base.durationXS, initDelay)}
               autoComplete="email"
               label="Your Email"
@@ -121,28 +92,15 @@ export const Contact = () => {
               style={getDelay(tokens.base.durationS, initDelay)}
               autoComplete="off"
               label="Message"
-              name="message"
+              name="message" // Important: Match the field name in your EmailJS template.
               maxLength={4096}
               {...message}
             />
-            {/* <Transition in={statusError} timeout={msToNum(tokens.base.durationM)}>
-              {errorStatus => (
-                <div
-                  className={styles.formError}
-                  data-status={errorStatus}
-                  style={cssProps({
-                    height: errorStatus ? errorRef.current?.offsetHeight : 0,
-                  })}
-                >
-                  <div className={styles.formErrorContent} ref={errorRef}>
-                    <div className={styles.formErrorMessage}>
-                      <Icon className={styles.formErrorIcon} icon="error" />
-                      {statusError}
-                    </div>
-                  </div>
-                </div>
-              )}
-            </Transition> */}
+            {statusError && (
+              <div className={styles.formError}>
+                <p>{statusError}</p>
+              </div>
+            )}
             <Button
               className={styles.button}
               data-status={status}
@@ -162,7 +120,7 @@ export const Contact = () => {
       <Transition unmount in={complete}>
         {(visible, status) => (
           <div className={styles.complete} aria-live="polite">
-            <Heading
+<Heading
               level={3}
               as="h3"
               className={styles.completeTitle}
@@ -198,24 +156,7 @@ export const Contact = () => {
   );
 };
 
-// function getStatusError({
-//   status,
-//   errorMessage,
-//   fallback = 'There was a problem with your request',
-// }) {
-//   if (status === 200) return false;
 
-//   const statuses = {
-//     500: 'There was a problem with the server, try again later',
-//     404: 'There was a problem connecting to the server. Make sure you are connected to the internet',
-//   };
-
-//   if (errorMessage) {
-//     return errorMessage;
-//   }
-
-//   return statuses[status] || fallback;
-// }
 
 function getDelay(delayMs, offset = numToMs(0), multiplier = 1) {
   const numDelay = msToNum(delayMs) * multiplier;
