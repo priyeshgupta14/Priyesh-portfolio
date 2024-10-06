@@ -18,6 +18,7 @@ import { Meta } from 'components/Meta';
 import { Intro } from 'layouts/Home/Intro';
 import { Profile } from 'layouts/Home/Profile';
 import { ProjectSummary } from 'layouts/Home/ProjectSummary';
+import { Experience } from 'layouts/Home/Experience';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
@@ -173,6 +174,8 @@ export const Home = () => {
         visible={visibleSections.includes(details.current)}
         id="details"
       />
+      <Experience />
+
       <Footer />
     </div>
   );
