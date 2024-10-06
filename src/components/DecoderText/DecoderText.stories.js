@@ -12,7 +12,7 @@ export default {
 export const Text = ({ text }) => (
   <StoryContainer>
     <Heading level={3}>
-      <DecoderText delay={0} text={text} />
+      <DecoderText delay={2} text={text} />
     </Heading>
   </StoryContainer>
 );

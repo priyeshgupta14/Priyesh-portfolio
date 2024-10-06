@@ -7,22 +7,21 @@ import styles from './DecoderText.module.css';
 
 // prettier-ignore
 const glyphs = [
-  'ア', 'イ', 'ウ', 'エ', 'オ',
-  'カ', 'キ', 'ク', 'ケ', 'コ',
-  'サ', 'シ', 'ス', 'セ', 'ソ',
-  'タ', 'チ', 'ツ', 'テ', 'ト',
-  'ナ', 'ニ', 'ヌ', 'ネ', 'ノ',
-  'ハ', 'ヒ', 'フ', 'ヘ', 'ホ',
-  'マ', 'ミ', 'ム', 'メ', 'モ',
-  'ヤ', 'ユ', 'ヨ', 'ー',
-  'ラ', 'リ', 'ル', 'レ', 'ロ',
-  'ワ', 'ヰ', 'ヱ', 'ヲ', 'ン',
-  'ガ', 'ギ', 'グ', 'ゲ', 'ゴ',
-  'ザ', 'ジ', 'ズ', 'ゼ', 'ゾ',
-  'ダ', 'ヂ', 'ヅ', 'デ', 'ド',
-  'バ', 'ビ', 'ブ', 'ベ', 'ボ',
-  'パ', 'ピ', 'プ', 'ペ', 'ポ',
+  '0', '1', '1', '0', '0',
+  '1', '0', '1', '1', '0',
+  '0', '1', '1', '0', '1',
+  '1', '0', '0', '1', '1',
+  '0', '0', '1', '1', '0',
+  '1', '1', '0', '0', '1',
+  '0', '1', '1', '0', '1',
+  '1', '0', '1', '0', '1',
+  '0', '1', '1', '0', '0',
+  '1', '1', '0', '0', '1',
+  '1', '0', '0', '1', '1',
+  '0', '1', '1', '0', '0'
 ];
+
+
 
 const CharType = {
   Glyph: 'glyph',
@@ -45,11 +44,11 @@ function shuffle(content, output, position) {
 }
 
 export const DecoderText = memo(
-  ({ text, start = true, delay: startDelay = 0, className, ...rest }) => {
+  ({ text, start = true, delay: startDelay = 15, className, ...rest }) => {
     const output = useRef([{ type: CharType.Glyph, value: '' }]);
     const container = useRef();
     const reduceMotion = useReducedMotion();
-    const decoderSpring = useSpring(0, { stiffness: 8, damping: 5 });
+    const decoderSpring = useSpring(-1, { stiffness: 4, damping: 4 });
 
     useEffect(() => {
       const containerInstance = container.current;
