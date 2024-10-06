@@ -18,7 +18,7 @@ export const navLinks = [
   {
     label: 'Resume',
     pathname:
-      'https://drive.google.com/file/d/1w0fSvU6YW2pG-HmDci4CAR_KE_K9zE0L/view?usp=sharing',
+      'https://drive.google.com/file/d/13b3J3UUOP4vskSP46B8KgxWOHXTXgTYj/view?usp=sharing',
   },
 ];
 
