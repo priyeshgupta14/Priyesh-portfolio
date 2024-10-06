@@ -6,7 +6,7 @@ import { Heading } from 'components/Heading';
 import { Input } from 'components/Input';
 import { Meta } from 'components/Meta';
 import { Section } from 'components/Section';
-import { Text } from 'components/Text';
+import { Text } from 'components/Text'; // Import Text component if not already
 import { tokens } from 'components/ThemeProvider/theme';
 import { Transition } from 'components/Transition';
 import { useFormInput } from 'hooks';
@@ -37,10 +37,10 @@ export const Contact = () => {
 
     try {
       const result = await emailjs.sendForm(
-        serviceID,  // Replace with your service ID
-        templateID, // Replace with your template ID
+        serviceID,
+        templateID,
         form.current,
-        publicKey  // Replace with your public key
+        publicKey
       );
       console.log('Email sent successfully:', result);
       setComplete(true);
@@ -55,6 +55,25 @@ export const Contact = () => {
   return (
     <Section className={styles.contact}>
       <Meta title="Contact" description="Send me a message" />
+      <Text className={styles.emailText} size="l" align="center">
+  <a>
+    Or You can mail me at
+  </a>
+</Text> 
+      
+      
+      <Text className={styles.emailText} size="l" align="center">
+  <a 
+    href="mailto:vinayakmr2003@gmail.com" 
+    className={`${styles.emailLink} ${styles.customColor}`} // Add the customColor class here
+  >
+    vinayakmr2003@gmail.com
+  </a>
+</Text>
+
+
+
+
       <Transition unmount in={!complete} timeout={1600}>
         {(visible, status) => (
           <form className={styles.form} ref={form} onSubmit={onSubmit}>
@@ -76,7 +95,7 @@ export const Contact = () => {
               required
               className={styles.input}
               data-status={status}
-              name="from_name"  // Important: Match the field name in your EmailJS template.
+              name="from_name"
               style={getDelay(tokens.base.durationXS, initDelay)}
               autoComplete="email"
               label="Your Email"
@@ -92,7 +111,7 @@ export const Contact = () => {
               style={getDelay(tokens.base.durationS, initDelay)}
               autoComplete="off"
               label="Message"
-              name="message" // Important: Match the field name in your EmailJS template.
+              name="message"
               maxLength={4096}
               {...message}
             />
@@ -120,7 +139,7 @@ export const Contact = () => {
       <Transition unmount in={complete}>
         {(visible, status) => (
           <div className={styles.complete} aria-live="polite">
-<Heading
+            <Heading
               level={3}
               as="h3"
               className={styles.completeTitle}
@@ -155,8 +174,6 @@ export const Contact = () => {
     </Section>
   );
 };
-
-
 
 function getDelay(delayMs, offset = numToMs(0), multiplier = 1) {
   const numDelay = msToNum(delayMs) * multiplier;

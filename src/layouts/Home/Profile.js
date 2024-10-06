@@ -21,7 +21,7 @@ const ProfileText = ({ visible, titleId }) => (
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       I&apos;m Vinayak, currently enrolled at{' '}
-      <Link href="https://kiit.ac.in">KIIT University</Link> to pursue an engineering
+      <Link href="https://iiitdwd.ac.in/">Indian Institute of Information Technology Dharwad</Link> to pursue an engineering
       degree in Information Technology. My area of expertise in web development is the
       MERN stack. As a self-taught developer, I&apos;m constantly searching for ways to
       improve. I pick things up quickly, and I&apos;m constantly eager to learn something

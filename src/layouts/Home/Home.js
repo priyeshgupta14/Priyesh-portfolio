@@ -7,7 +7,7 @@ import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 
 import hmsPreview from 'assets/pro1.jpg';
-import cicd from 'assets/cicd.png';
+import cicd from 'assets/pro5.png';
 import algoVE from 'assets/algo-ve-preview.png';
 import blockchain from 'assets/pro2.jpg';
 import algoVE2 from 'assets/algoVE2.png';
@@ -22,7 +22,7 @@ import { Experience } from 'layouts/Home/Experience';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
-const disciplines = ['Student', 'Learner'];
+const disciplines = ['AI Enthusiast', 'Learner','Designer','Programmer','Data Scientist'];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -129,10 +129,10 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="CI/CD Pipeline using Jenkins and Docker"
-        description="his is a basic starter website that was built incorporating a CI/CD Pipeline involving GitHub Webhooks and Jenkins. Every push is deployed via an nginx docker container"
+        title="Centio.Ai Conversational AI with Research and Task Automation"
+        description="This is AI-driven platform that enables versatile chat interactions, task automation, and in-depth research capabilities. With features like Regular Chat, Assistant tasks, and document management, it streamlines workflows for enhanced productivity."
         buttonText="View project"
-        buttonLink="https://github.com/Vinayakjain25/Microo-Starter-Website"
+        buttonLink="https://github.com/VinayakRai5/Centio.AI"
         model={{
           type: 'laptop',
           alt: 'Visual description of the pipeline workflow',

@@ -137,6 +137,18 @@
   }
 }
 
+.emailLink {
+  color: #add8e6; /* Light blue color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.emailLink:hover {
+  color: #007acc; /* Darker blue color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+
 .button {
   --buttonLoaderDelay: var(--durationL);
 
