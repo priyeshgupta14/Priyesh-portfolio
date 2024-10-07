@@ -1,69 +1,90 @@
-import { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import styles from './Experience.module.css'; // Import CSS Module
-
-const experiences = [
-  {
-    company: 'EnsVision',
-    description: 'Developed and implemented computer vision algorithms for object detection and tracking.', // Add more details
-  },
-  {
-    company: 'Ypredict.io',
-    description: 'Built and deployed machine learning models for predictive analytics.',// Add more details
-  },
-    {
-    company: 'Trouve Tavoie',
-    description: 'Designed and developed a web application for local tourism.', // Add more details
-  },
-    // ... add more experiences
-];
-
-
+import React from "react";
+import { motion } from "framer-motion";
+import IIITB from "layouts/Home/IIITB";
+import NITPY from "layouts/Home/NITPY";
+import styles from './Experience.module.css'; // Import the CSS module
 
 export const Experience = () => {
-  const [selectedExperience, setSelectedExperience] = useState(0);
-  const [barPosition, setBarPosition] = useState(0);
-  const experienceRefs = useRef([]);
+  const barRef = React.useRef(null);
+  const [DescriptionJob, setDescriptionJob] = React.useState("Advanced Agro Management");
 
-  useEffect(() => {
-      // Calculate bar position based on the selected experience and ref positions
-      if (experienceRefs.current[selectedExperience]) {
-          const offsetTop = experienceRefs.current[selectedExperience].offsetTop;
-          setBarPosition(offsetTop);
-      }
-  }, [selectedExperience]);
-  
+  const GetDescription = () => {
+    switch (DescriptionJob) {
+      case "IIITB":
+        return <IIITB />;
+      case "NITPY":
+        return <NITPY />;
+      default:
+        return null;
+    }
+  };
 
   return (
-      <div className={styles.experienceContainer}> {/* Use CSS Module class */}
-          <div className={styles.header}> {/* Use CSS Module class */}
-              <h2>Where I`&apos;`ve Worked</h2>
-          </div>
-          <div className={styles.content}> {/* Use CSS Module class */}
-              <div className={styles.companyList}> {/* Use CSS Module class */}
-                  <motion.div
-                      className={styles.activeBar} /* Use CSS Module class */
-                      style={{ top: barPosition }} // Dynamically position the bar
-                      layout
-                      transition={{ type: "spring", stiffness: 100, damping: 20}} // Smooth animation
-                  />
-                  {experiences.map((exp, index) => (
-                      <button
-                          key={index}
-                          onClick={() => setSelectedExperience(index)}
-                          ref={el => (experienceRefs.current[index] = el)} // Assign refs
-                          className={`${styles.companyButton} ${selectedExperience === index ? styles.active : ''}`} // Use CSS Module classes and conditional styling
-                      >
-                          {exp.company}
-                      </button>
-                  ))}
-              </div>
+    <div data-aos="fade-up" className={styles.container}>
+      <section className={styles.titleSection}>
+        <div className={styles.titleSection}>
+          <span className={styles.titleNumber}> 02.</span>
+        </div>
+        <span className={styles.titleText}>Where I&apos;ve Worked</span>
+        <div className={styles.divider}></div>
+      </section>
+      <section className={styles.experienceSection}>
+        <CompaniesBar setDescriptionJob={setDescriptionJob} />
+        {GetDescription()}
+      </section>
+    </div>
+  );
+};
 
-              <div className={styles.description}> {/* Use CSS Module class */}
-                  {/* Render the description of the selected experience */}
-                  <p>{experiences[selectedExperience].description}</p>
-              </div>
-          </div>
+const CompaniesBar = (props) => {
+  const [barPosition, setBarPosition] = React.useState(-8);
+  const [barAbovePosition, setBarAbovePosition] = React.useState(0);
+  const [companyNameBackgroundColorGreen, setCompanyNameBackgroundColorGreen] = React.useState([true,false]);
+
+  const CompanyButton = (props) => (
+    <button
+      onClick={() => {
+        setBarPosition(props.BarPosition);
+        setBarAbovePosition(props.BarAvobePosition);
+        props.setDescriptionJob(props.DescriptionJob);
+        setCompanyNameBackgroundColorGreen(props.CompanyNameBackgroundColorGreen);
+      }}
+      className={`${styles.companyButton} ${
+        companyNameBackgroundColorGreen[props.ButtonOrderOfcompanyNameBackgroundColorGreen] && styles.selectedCompanyButton
+      }`}
+    >
+      {props.CompanyName}
+    </button>
+  );
+
+  return (
+    <div className={styles.barContainer}>
+      <div className={styles.barWrapper}>
+        <motion.div animate={{ y: barPosition }} className={styles.animatedBar}></motion.div>
       </div>
+      <div className={`${styles.flexCol} ${styles.spaceY1} ${styles.paddingLeft8} ${styles.paddingLeft0Md}`}>
+      <CompanyButton
+          ButtonOrderOfcompanyNameBackgroundColorGreen={0}
+          CompanyName="IIITB"
+          BarPosition={-10}
+          BarAvobePosition={1}
+          DescriptionJob="IIITB"
+          CompanyNameBackgroundColorGreen={[true,false]}
+          setDescriptionJob={props.setDescriptionJob}
+        />
+        <CompanyButton
+          ButtonOrderOfcompanyNameBackgroundColorGreen={0}
+          CompanyName="NITPY"
+          BarPosition={-10}
+          BarAvobePosition={1}
+          DescriptionJob="NITPY"
+          CompanyNameBackgroundColorGreen={[false,true]}
+          setDescriptionJob={props.setDescriptionJob}
+        />
+      </div>
+      <div className={styles.horizontalBar}>
+        <motion.div animate={{ x: barAbovePosition }} className={styles.animatedHorizontalBar}></motion.div>
+      </div>
+    </div>
   );
 };

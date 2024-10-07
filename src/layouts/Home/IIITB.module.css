@@ -1,0 +1,66 @@
+/* IIITB.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  color: #f3f4f6;
+  font-family: 'Arimo', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.company {
+  color: #d97706;
+}
+
+.date {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.taskItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.taskText {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .title {
+    font-size: 0.875rem;
+  }
+
+  .taskText {
+    font-size: 0.75rem;
+  }
+}

@@ -1,73 +1,178 @@
-.experienceContainer {
-    display: flex;
-    flex-direction: column;  /* Mobile-first layout */
-    gap: 2rem;
-    padding: 2rem;
-}
+/* Experience.module.css */
 
-.header {
-    text-align: center; /* Center the title */
-}
-
-
-.content {
-    display: flex;
-    flex-direction: column; /* Start with a column layout for smaller screens */
-    gap: 1rem;
-}
-
-
-.companyList {
+.container {
     display: flex;
     flex-direction: column;
-    position: relative; /* Needed for absolute positioning of the active bar */
-}
-
-.activeBar {
-    position: absolute;
-    left: 0;
-    width: 4px;
-    background-color: #40E0D0; /* Example color - change as desired */
-    border-radius: 2px;
-    transition: top 0.3s ease-in-out;
-}
-
-
-.companyButton {
-    background: none;
-    border: none;
-    padding: 0.5rem;
-    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #1a202c; /* AAprimary */
+  }
+  
+  .titleSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .titleNumber {
+    color: #d97706; /* AAsecondary */
+    font-family: sans-serif;
+    font-size: 0.875rem; /* sm */
+  }
+  
+  .titleText {
+    color: #e5e7eb;
+    opacity: 0.85;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-size: 1.125rem; /* lg */
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .divider {
+    background-color: #9ca3af; /* gray */
+    height: 0.2px;
+    width: 16rem;
+  }
+  
+  @media (min-width: 640px) {
+    .divider {
+      width: 11rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .divider {
+      width: 20rem;
+    }
+  }
+  
+  /* Where I've Worked Section */
+  .experienceSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .experienceSection {
+      flex-direction: row;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  
+  /* Companies Bar */
+  .barContainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .barContainer {
+      padding-left: 0;
+    }
+  }
+  
+  .companyButton {
+    font-family: monospace;
     text-align: left;
-}
-
-.companyButton.active {
-  color: #40E0D0; /* Highlight active button */
-  font-weight: bold;
-}
-
-
-.description {
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-
-/* Media query for larger screens (e.g., tablets and desktops) */
-@media (min-width: 768px) {
-    .content {
-        flex-direction: row;  /* Switch to row layout for larger screens */
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    background-color: transparent;
+    color: #6b7280; /* gray */
+    border-radius: 0.25rem;
+    transition: all 0.5s ease;
+  }
+  
+  .companyButton:hover {
+    color: #d97706; /* AAsecondary */
+    background-color: #4b5563; /* ResumeButtonHover */
+  }
+  
+  .selectedCompanyButton {
+    color: #d97706;
+    background-color: #4b5563;
+  }
+  
+  /* Animated Bar */
+  .barWrapper {
+    background-color: #9ca3af; /* gray */
+    position: relative;
+    height: 352px;
+    width: 2px;
+    border-radius: 0.25rem;
+  }
+  
+  .animatedBar {
+    position: absolute;
+    background-color: #d97706; /* AAsecondary */
+    height: 3rem;
+    width: 2px;
+    border-radius: 0.25rem;
+  }
+  
+  /* Horizontal bar for small screens */
+  .horizontalBar {
+    background-color: #9ca3af;
+    height: 2px;
+    width: 128px;
+    border-radius: 0.25rem;
+  }
+  
+  .animatedHorizontalBar {
+    background-color: #d97706;
+    height: 2px;
+    border-radius: 0.25rem;
+  }
+  
+  /* Job description */
+  .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #f3f4f6;
+  }
+  
+  @media (min-width: 768px) {
+    .descriptionContainer {
+      padding-left: 0;
+      padding-right: 0;
     }
+  }
 
-    .companyList {
-        flex-direction: column; 
-        width: 200px;      
+  /* For flex column layout with spacing */
+.flexCol {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .spaceY1 {
+    gap: 0.25rem; /* Equivalent to space-y-1 in Tailwind (4px) */
+  }
+  
+  .paddingLeft8 {
+    padding-left: 2rem; /* Equivalent to pl-8 in Tailwind (32px) */
+  }
+  
+  .paddingLeft0Md {
+    padding-left: 0; /* Equivalent to pl-0 on medium screens */
+  }
+  
+  @media (min-width: 768px) {
+    .paddingLeft0Md {
+      padding-left: 0;
     }
-      .activeBar {
-         height: 40px; /* Adjust active bar height as needed */
-        width: 4px;
-
-
-    }
-}
+  }
+  
+  
+  
