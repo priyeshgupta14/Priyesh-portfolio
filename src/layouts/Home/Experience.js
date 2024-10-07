@@ -34,7 +34,7 @@ export const Experience = () => {
       </section>
     </div>
   );
-}
+};
 
 const CompaniesBar = (props) => {
   const [barPosition, setBarPosition] = React.useState(-8);
