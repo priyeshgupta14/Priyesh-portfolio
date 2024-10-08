@@ -74,7 +74,7 @@ export function Experience({id, sectionRef, scrollIndicatorHidden, ...rest}){
             </RouterLink>
     </Section>
   );
-};
+}
 
 const CompaniesBar = (props) => {
   // Set initial positions for the bar and selection
