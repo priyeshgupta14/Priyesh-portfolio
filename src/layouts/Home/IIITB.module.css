@@ -1,5 +1,46 @@
-/* IIITB.module.css */
+/* Dark mode and light mode support */
 
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .container {
+    background-color: var(--background-dark);
+    color: var(--text-color-dark);
+  }
+  .title {
+    color: var(--text-color-dark);
+  }
+  .company {
+    color: var(--company-color-dark);
+  }
+  .date {
+    color: var(--date-color-dark);
+  }
+  .taskText {
+    color: var(--task-color-dark);
+  }
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  .container {
+    background-color: var(--background-light);
+    color: var(--text-color-light);
+  }
+  .title {
+    color: var(--text-color-light);
+  }
+  .company {
+    color: var(--company-color-light);
+  }
+  .date {
+    color: var(--date-color-light);
+  }
+  .taskText {
+    color: var(--task-color-light);
+  }
+}
+
+/* Container styling */
 .container {
   display: flex;
   flex-direction: column;
@@ -8,6 +49,7 @@
   padding-right: 1rem;
 }
 
+/* Title section */
 .titleContainer {
   display: flex;
   flex-direction: column;
@@ -15,23 +57,22 @@
 }
 
 .title {
-  color: #f3f4f6;
   font-family: 'Arimo', sans-serif;
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 
 .company {
-  color: #d97706;
+  font-weight: bold;
 }
 
 .date {
   font-family: monospace;
-  font-size: 0.75rem;
-  color: #6b7280;
+  font-size: 0.85rem;
 }
 
+/* Task list styling */
 .taskList {
   display: flex;
   flex-direction: column;
@@ -46,10 +87,10 @@
 }
 
 .taskText {
-  color: #6b7280;
-  font-size: 0.875rem;
+  font-size: 1.1rem;
 }
 
+/* Responsive styling */
 @media (max-width: 768px) {
   .container {
     padding-left: 0;
