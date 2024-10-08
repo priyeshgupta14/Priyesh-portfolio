@@ -1,20 +1,20 @@
-import React from "react";
-import { getTasksTextWithHighlightedKeyword } from "layouts/Home/taskAndType";
+import React from 'react';
+import { getTasksTextWithHighlightedKeyword } from 'layouts/Jobs/taskAndType';
 import styles from './IIITB.module.css'; // Importing the module
 
 export default function IIITB() {
   const tasks = [
     {
-      text: "Developed and Build a new version customizable website for Advanced Agro Management.",
-      keywords: ["Advanced Agro Management"],
+      text: 'Developed and Build a new version customizable website for Advanced Agro Management.',
+      keywords: ['Advanced Agro Management'],
     },
     {
-      text: "Monitored website performance and handled troubleshooting and WordPress issues.",
-      keywords: ["Monitored", "WordPress issues"],
+      text: 'Monitored website performance and handled troubleshooting and WordPress issues.',
+      keywords: ['Monitored', 'WordPress issues'],
     },
     {
-      text: "Managed company WordPress website back-end with Oracle Database including plugins, tools, and themes.",
-      keywords: ["Oracle Database"],
+      text: 'Managed company WordPress website back-end with Oracle Database including plugins, tools, and themes.',
+      keywords: ['Oracle Database'],
     },
   ];
 

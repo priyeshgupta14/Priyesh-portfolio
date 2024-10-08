@@ -1,12 +1,22 @@
 import React from "react";
 import { motion } from "framer-motion";
-import IIITB from "layouts/Home/IIITB";
-import NITPY from "layouts/Home/NITPY";
+import IIITB from "layouts/Jobs/IIITB";
+import NITPY from "layouts/Jobs/NITPY";
+import ArrowDown from 'assets/arrow-down.svg';
+import RouterLink from 'next/link';
 import styles from './Experience.module.css'; // Import the CSS module
-
-export const Experience = () => {
+import { useScrollToHash } from "hooks";
+import { VisuallyHidden } from "components/VisuallyHidden";
+import { Section } from "components/Section";
+export function Experience({id, sectionRef, scrollIndicatorHidden, ...rest}){
   // Set IIITB as the default experience section
   const [DescriptionJob, setDescriptionJob] = React.useState("IIITB");
+  const scrollToHash = useScrollToHash();
+  const handleScrollClick = event => {
+    event.preventDefault();
+    scrollToHash(event.currentTarget.href);
+  };
+
 
   const GetDescription = () => {
     switch (DescriptionJob) {
@@ -20,6 +30,14 @@ export const Experience = () => {
   };
 
   return (
+    <Section
+    className={styles.intro}
+    as="section"
+    ref={sectionRef}
+    id={id}
+    tabIndex={-1}
+    {...rest}
+  >
     <div data-aos="fade-up" className={styles.container}>
       <section className={styles.titleSection}>
         <div className={styles.titleSection}>
@@ -35,6 +53,26 @@ export const Experience = () => {
         </ul>
       </section>
     </div>
+    <RouterLink href="/#experience">
+              <a
+                className={styles.scrollIndicator}
+                data-hidden={scrollIndicatorHidden}
+                onClick={handleScrollClick}
+              >
+                <VisuallyHidden>Scroll to projects</VisuallyHidden>
+              </a>
+            </RouterLink>
+            <RouterLink href="/#project-1">
+              <a
+                className={styles.mobileScrollIndicator}
+                data-hidden={scrollIndicatorHidden}
+                onClick={handleScrollClick}
+              >
+                <VisuallyHidden>Scroll to projects</VisuallyHidden>
+                <ArrowDown aria-hidden />
+              </a>
+            </RouterLink>
+    </Section>
   );
 };
 
