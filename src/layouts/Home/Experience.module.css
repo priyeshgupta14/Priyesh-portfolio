@@ -1,178 +1,162 @@
-/* Experience.module.css */
-
+/* Container styling */
 .container {
+    margin-left: 22%;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-top: 6rem;
     padding-bottom: 6rem;
-    background-color: #1a202c; /* AAprimary */
-  }
-  
-  .titleSection {
+    background-color: var(--background); /* Dynamic background color */
+    font-family: Arial, sans-serif; /* Font set to Arial */
+}
+
+/* Title section */
+.titleSection {
     display: flex;
     flex-direction: row;
     align-items: center;
-  }
-  
-  .titleNumber {
-    color: #d97706; /* AAsecondary */
-    font-family: sans-serif;
+}
+
+.titleNumber {
+    color: var(--primaryColor); /* Dynamic color */
+    font-family: Arial, sans-serif;
     font-size: 0.875rem; /* sm */
-  }
-  
-  .titleText {
-    color: #e5e7eb;
+}
+
+.titleText {
+    color: cyan;
     opacity: 0.85;
     font-weight: bold;
     letter-spacing: 0.05em;
-    font-size: 1.125rem; /* lg */
+    font-size: 2rem; /* lg */
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-  }
-  
-  .divider {
-    background-color: #9ca3af; /* gray */
+}
+
+/* Divider */
+.divider {
+    background-color: aqua; /* Dynamic divider color */
     height: 0.2px;
     width: 16rem;
-  }
-  
-  @media (min-width: 640px) {
-    .divider {
-      width: 11rem;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .divider {
-      width: 20rem;
-    }
-  }
-  
-  /* Where I've Worked Section */
-  .experienceSection {
+}
+
+.experienceSection {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
     margin-bottom: 1rem;
     justify-content: center;
     align-items: center;
-  }
-  
-  @media (min-width: 768px) {
+}
+
+/* Experience list with bullet points */
+.experienceList {
+    list-style-type: disc;
+    color: var(--textColor); /* Dynamic list color */
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Button container */
+.buttonContainer {
+    margin-top: 2rem;
+}
+
+/* Make divider responsive */
+@media (min-width: 640px) {
+    .divider {
+        width: 11rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .divider {
+        width: 20rem;
+    }
+}
+
+/* Flex row for large screens */
+@media (min-width: 768px) {
     .experienceSection {
-      flex-direction: row;
-      margin-top: 0;
-      margin-bottom: 0;
+        flex-direction: row;
+        margin-top: 0;
+        margin-bottom: 0;
     }
-  }
-  
-  /* Companies Bar */
-  .barContainer {
+}
+
+/* Company buttons positioned near the bar on the upper left */
+.barContainer {
+    margin-left: -13%;
     display: flex;
-    flex-direction: column;
-    padding-left: 2rem;
-  }
-  
-  @media (min-width: 768px) {
-    .barContainer {
-      padding-left: 0;
-    }
-  }
-  
-  .companyButton {
-    font-family: monospace;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+}
+
+.companyButtonContainer {
+    display: flex;
+    flex-direction: row;
+    margin-right: 1rem;
+    position: absolute;
+    left: -120px; /* Adjust positioning as needed */
+    top: 0;
+}
+
+/* Company button */
+.companyButton {
+    display: block;
+    font-family: Arial, sans-serif;
     text-align: left;
     padding: 0.75rem 1.5rem;
     font-size: 0.875rem;
     background-color: transparent;
-    color: #6b7280; /* gray */
+    color: var(--primaryColor); /* Dynamic button color */
     border-radius: 0.25rem;
-    transition: all 0.5s ease;
-  }
-  
-  .companyButton:hover {
-    color: #d97706; /* AAsecondary */
-    background-color: #4b5563; /* ResumeButtonHover */
-  }
-  
-  .selectedCompanyButton {
-    color: #d97706;
-    background-color: #4b5563;
-  }
-  
-  /* Animated Bar */
-  .barWrapper {
-    background-color: #9ca3af; /* gray */
+    border: 1px solid var(--primaryColor); /* Add border to distinguish */
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover and selected styles */
+.companyButton:hover, .companyButton.selectedCompanyButton {
+    background-color: rgb(174, 222, 222); /* Hover and selected background */
+    color: darkcyan; /* Hover and selected text color */
+    font-weight: bold;
+    border-color: darkcyan; /* Border changes when selected */
+}
+
+
+/* Animated bar */
+.barWrapper {
     position: relative;
     height: 352px;
     width: 2px;
     border-radius: 0.25rem;
-  }
-  
-  .animatedBar {
+}
+
+.animatedBar {
+    margin-top: 7px;
     position: absolute;
-    background-color: #d97706; /* AAsecondary */
-    height: 3rem;
+    background-color: aqua; /* Dynamic bar color */
+    height: 3.35rem;
     width: 2px;
     border-radius: 0.25rem;
-  }
-  
-  /* Horizontal bar for small screens */
-  .horizontalBar {
-    background-color: #9ca3af;
-    height: 2px;
-    width: 128px;
-    border-radius: 0.25rem;
-  }
-  
-  .animatedHorizontalBar {
-    background-color: #d97706;
-    height: 2px;
-    border-radius: 0.25rem;
-  }
-  
-  /* Job description */
-  .descriptionContainer {
+}
+
+.descriptionContainer {
     display: flex;
     flex-direction: column;
     max-width: 40rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    color: #f3f4f6;
-  }
-  
-  @media (min-width: 768px) {
-    .descriptionContainer {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
+    color: var(--textColor); /* Dynamic text color */
+}
 
-  /* For flex column layout with spacing */
-.flexCol {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .spaceY1 {
-    gap: 0.25rem; /* Equivalent to space-y-1 in Tailwind (4px) */
-  }
-  
-  .paddingLeft8 {
-    padding-left: 2rem; /* Equivalent to pl-8 in Tailwind (32px) */
-  }
-  
-  .paddingLeft0Md {
-    padding-left: 0; /* Equivalent to pl-0 on medium screens */
-  }
-  
-  @media (min-width: 768px) {
-    .paddingLeft0Md {
-      padding-left: 0;
+@media (min-width: 768px) {
+    .descriptionContainer {
+        padding-left: 0;
+        padding-right: 0;
     }
-  }
-  
-  
-  
+}
