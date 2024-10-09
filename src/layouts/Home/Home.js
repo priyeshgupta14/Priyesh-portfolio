@@ -33,6 +33,7 @@ export const Home = () => {
   const projectThree = useRef();
   const projectFour = useRef();
   const details = useRef();
+  
 
   useEffect(() => {
     const sections = [intro, projectOne, projectTwo, projectThree, projectFour, details];
@@ -83,6 +84,13 @@ export const Home = () => {
         disciplines={disciplines}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
+            <Profile
+        sectionRef={details}
+        visible={visibleSections.includes(details.current)}
+        id="details"
+      />
+      <Experience 
+      id="experience" />
       <ProjectSummary
         id="project-1"
         sectionRef={projectOne}
@@ -169,13 +177,6 @@ export const Home = () => {
           ],
         }}
       />
-      <Profile
-        sectionRef={details}
-        visible={visibleSections.includes(details.current)}
-        id="details"
-      />
-      <Experience />
-
       <Footer />
     </div>
   );
