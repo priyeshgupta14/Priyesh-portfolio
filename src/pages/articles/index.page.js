@@ -1,35 +1,36 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import readingTime from 'reading-time';
-import { POSTS_PATH, postFilePaths } from 'utils/mdx';
-import { formatTimecode } from 'utils/timecode';
 
-export { Articles as default } from './Articles';
+import { POSTS_PATH, postFilePaths } from 'utils/mdx'; // Import your MDX utils
 
-export function getStaticProps() {
-  const allPosts = postFilePaths.map(filePath => {
-    const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
-    const { data, content } = matter(source);
 
-    const { time } = readingTime(content);
-    const timecode = formatTimecode(time);
+import { Articles} from './Articles';
+
+
+export default function ArticlesPage({ posts, featured }) {
+  return <Articles posts={posts} featured={featured} />;
+}
+
+export async function getStaticProps() {
+  const allPostsData = postFilePaths.map(async (filePath) => {
+    const source = fs.readFileSync(path.join(POSTS_PATH, filePath), 'utf-8');
+    const { data } = matter(source);
 
     return {
       ...data,
-      timecode,
-      slug: filePath.replace(/\.mdx?$/, ''),
+      slug: data.slug,  // Get slug from frontmatter
+      externalUrl: data.externalUrl,
     };
   });
 
-  const featured = allPosts.find(post => post.featured);
+  const allPosts = await Promise.all(allPostsData);
 
-  const posts = allPosts
-    .filter(post => post.slug !== featured.slug)
-    .sort((a, b) => {
-      return new Date(a.date).getTime() - new Date(b.date).getTime();
-    })
-    .reverse();
+
+  const featured = allPosts.find(post => post.featured);
+  const posts = allPosts.filter(post => !post.featured)
+                     .sort((a, b) => new Date(b.date) - new Date(a.date));
+
 
   return {
     props: { posts, featured },
