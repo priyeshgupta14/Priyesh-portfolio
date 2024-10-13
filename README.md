@@ -34,7 +34,7 @@ npm run dev
 
 ## Deployment [![Netlify Status](https://api.netlify.com/api/v1/badges/d07f3b07-070a-41d7-bf4e-becc24e52a11/deploy-status)](https://app.netlify.com/sites/priyeshgupta/deploys)
 
-This site has been deployed on Netlify. You can visit it [here](https://Priyesh Guptarai.netlify.app)
+This site has been deployed on Netlify. You can visit it [here](https://priyeshgupta.netlify.app)
 
 ## License
 
