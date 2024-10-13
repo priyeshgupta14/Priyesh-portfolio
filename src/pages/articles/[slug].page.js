@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
 const externalLinks = {
-  'hello-world': 'https://e2mip.org/conference/',
+  'TALE Conference': 'https://2024.tale-conference.org/',
   'ccp': "https://google.com" // Example
   // ... other articles
 };
