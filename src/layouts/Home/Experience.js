@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import IIITB from "layouts/Jobs/IIITB";
+import IIITB from "layouts/Jobs/IITB";
 import NITPY from "layouts/Jobs/NITPY";
 import ArrowDown from 'assets/arrow-down.svg';
 import RouterLink from 'next/link';

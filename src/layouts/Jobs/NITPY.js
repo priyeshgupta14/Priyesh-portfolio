@@ -1,7 +1,7 @@
 import React from 'react';
 // import ArrowIcon from "../../../Icons/ArrowIcon";
 import { getTasksTextWithHighlightedKeyword } from 'layouts/Jobs/taskAndType';
-import styles from './IIITB.module.css'; // Importing the module
+import styles from './IITB.module.css'; // Importing the module
 
 export default function EnsVision() {
   const tasks = [
