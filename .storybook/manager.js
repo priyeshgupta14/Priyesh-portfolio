@@ -5,7 +5,7 @@ addons.setConfig({
   theme: {
     ...themes.dark,
     // brandImage: 'https://hamishw.com/icon.svg',
-    brandTitle: 'Vinayak Components',
-    brandUrl: 'https://Vinayakjain.cf',
+    brandTitle: 'Priyesh Gupta Components',
+    brandUrl: 'https://Priyesh Guptajain.cf',
   },
 });
