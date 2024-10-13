@@ -1,6 +1,6 @@
 # Personal portfolio
 
-[![Site preview](/public/site-preview.png)](https://Priyesh Guptarai.netlify.app)
+[![Site preview](/public/site-preview.png)](https://priyeshgupta.netlify.app)
 
 This is my personal portfolio website to showcase some of my projects as well as my interests.
 
@@ -32,7 +32,7 @@ Once it's done start up a local server with:
 npm run dev
 ```
 
-## Deployment [![Netlify Status](https://api.netlify.com/api/v1/badges/d07f3b07-070a-41d7-bf4e-becc24e52a11/deploy-status)](https://app.netlify.com/sites/Priyesh Guptarai/deploys)
+## Deployment [![Netlify Status](https://api.netlify.com/api/v1/badges/d07f3b07-070a-41d7-bf4e-becc24e52a11/deploy-status)](https://app.netlify.com/sites/priyeshgupta/deploys)
 
 This site has been deployed on Netlify. You can visit it [here](https://Priyesh Guptarai.netlify.app)
 
