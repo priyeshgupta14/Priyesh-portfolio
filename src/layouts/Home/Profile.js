@@ -20,26 +20,23 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I&apos;m Vinayak, currently enrolled at{' '}
-      <Link href="https://iiitdwd.ac.in/">Indian Institute of Information Technology Dharwad</Link> to pursue an engineering
-      degree in Information Technology. My area of expertise in web development is the
-      MERN stack. As a self-taught developer, I&apos;m constantly searching for ways to
-      improve. I pick things up quickly, and I&apos;m constantly eager to learn something
-      new. I work well in teams and am constantly willing to lend a hand. In addition to
-      this, I am a <b>Content Writer/Marketer</b> as well.
-    </Text>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I am a member of the{' '}
-      <Link href="https://msckiit.tech">
-        Microsoft Learn Student Ambassadors, KIIT Chapter
-      </Link>{' '}
-      as a{' '}
-      <span style={{ fontWeight: 'bold' }}>Creative Lead and Operations Executive</span>{' '}
-      and <span style={{ fontWeight: 'bold' }}>Senior Executive</span> at the{' '}
-      <Link href="https://ecell.org.in">KIIT Entrepreneurship Cell</Link>. I&apos;ve
-      helped organised several events having a cumulative footfall of more than 3000+
-      people, and have the experience of managing a team of 100+ members as well.
-    </Text>
+  I'm Vinayak, a versatile full stack web developer and designer pursuing a degree in Data Science and AI at{' '}
+  <Link href="https://iiitdwd.ac.in/">Indian Institute of Information Technology Dharwad</Link>. 
+  With expertise in the MERN stack and a keen eye for design, I craft seamless web experiences. 
+  My passion extends to AI, specializing in machine learning, computer vision, and NLP.
+</Text>
+<Text className={styles.description} data-visible={visible} size="l" as="p">
+  I've completed 4 internships, published 2 research papers, and was selected for the{' '}
+  <span style={{ fontWeight: 'bold' }}>Amazon Machine Learning Summer School '24</span>. 
+  My research spans speaker diarization and metacognitive regulation in learning environments. 
+  As <span style={{ fontWeight: 'bold' }}>Tech Team Lead</span> for our DS&AI Society, 
+  I've led projects from online platforms for the specially abled to AI-powered attention tracking systems.
+</Text>
+<Text className={styles.description} data-visible={visible} size="l" as="p">
+  Proficient in Python, TensorFlow, and PyTorch, I'm committed to solving real-world challenges 
+  with cutting-edge technology. Always eager to learn, I thrive in dynamic environments where 
+  I can push the boundaries of web development and AI.
+</Text>
   </Fragment>
 );
 
