@@ -2,19 +2,19 @@ import React from 'react';
 import { getTasksTextWithHighlightedKeyword } from 'layouts/Jobs/taskAndType';
 import styles from './IITB.module.css'; // Importing the module
 
-export default function IIITB() {
+export default function IITB() {
   const tasks = [
     {
-      text: 'Developed and Build a new version customizable website for Advanced Agro Management.',
-      keywords: ['Advanced Agro Management'],
+      text: '• Developed scalable multimodal data analytics solutions for speaker diarization, audio/text processing, emotion recognition, and insight extraction. (Paper Accepted in IEEE-TALE 2024 Conference).',
+      keywords: ['TensorFlow'],
     },
     {
-      text: 'Monitored website performance and handled troubleshooting and WordPress issues.',
-      keywords: ['Monitored', 'WordPress issues'],
+      text: '• Collaborated on designing and implementing AffectBots, an Affect-Aware Tutoring System using Computer Vision and machine learning for real-time affect detection.',
+      keywords: ['PyTorch, PyAnnote, OpenCV'],
     },
     {
-      text: 'Managed company WordPress website back-end with Oracle Database including plugins, tools, and themes.',
-      keywords: ['Oracle Database'],
+      text: '• Optimized and quantized deep learning models, reducing size by 70% while maintaining accuracy, enabling efficient deployment and scaling of AffectBots.',
+      keywords: ['Django'],
     },
   ];
 
@@ -22,9 +22,9 @@ export default function IIITB() {
     <div className={styles.container}>
       <div className={styles.titleContainer}>
         <span className={styles.title}>
-          Software Developer <span className={styles.company}>@ Wordpress</span>
+        Research Associate <span className={styles.company}>- Dept of Educational Technology</span>
         </span>
-        <span className={styles.date}>June - Aug 2019</span>
+        <span className={styles.date}>May 2023 - August 2024</span>
       </div>
       <div className={styles.taskList}>
         {tasks.map((item, index) => (
