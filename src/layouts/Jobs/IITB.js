@@ -1,6 +1,6 @@
 import React from 'react';
 import { getTasksTextWithHighlightedKeyword } from 'layouts/Jobs/taskAndType';
-import styles from './IIITB.module.css'; // Importing the module
+import styles from './IITB.module.css'; // Importing the module
 
 export default function IIITB() {
   const tasks = [
