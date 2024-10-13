@@ -20,20 +20,20 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-  I'm Vinayak, a versatile full stack web developer and designer pursuing a degree in Data Science and AI at{' '}
+  I&apos;m Vinayak, a versatile full stack web developer and designer pursuing a degree in Data Science and AI at{' '}
   <Link href="https://iiitdwd.ac.in/">Indian Institute of Information Technology Dharwad</Link>. 
   With expertise in the MERN stack and a keen eye for design, I craft seamless web experiences. 
   My passion extends to AI, specializing in machine learning, computer vision, and NLP.
 </Text>
 <Text className={styles.description} data-visible={visible} size="l" as="p">
-  I've completed 4 internships, published 2 research papers, and was selected for the{' '}
-  <span style={{ fontWeight: 'bold' }}>Amazon Machine Learning Summer School '24</span>. 
+  I&apos;ve completed 4 internships, published 2 research papers, and was selected for the{' '}
+  <span style={{ fontWeight: 'bold' }}>Amazon Machine Learning Summer School &apos;24</span>. 
   My research spans speaker diarization and metacognitive regulation in learning environments. 
   As <span style={{ fontWeight: 'bold' }}>Tech Team Lead</span> for our DS&AI Society, 
-  I've led projects from online platforms for the specially abled to AI-powered attention tracking systems.
+  I&apos;ve led projects from online platforms for the specially abled to AI-powered attention tracking systems.
 </Text>
 <Text className={styles.description} data-visible={visible} size="l" as="p">
-  Proficient in Python, TensorFlow, and PyTorch, I'm committed to solving real-world challenges 
+  Proficient in Python, TensorFlow, and PyTorch, I&apos;m committed to solving real-world challenges 
   with cutting-edge technology. Always eager to learn, I thrive in dynamic environments where 
   I can push the boundaries of web development and AI.
 </Text>
