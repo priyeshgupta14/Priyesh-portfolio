@@ -7,7 +7,7 @@ import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 
 import hmsPreview from 'assets/pro1.jpg';
-import cicd from 'assets/pro5.png';
+import cicd from 'assets/trustblock.png';
 import algoVE from 'assets/algo-ve-preview.png';
 import blockchain from 'assets/pro2.jpg';
 import algoVE2 from 'assets/algoVE2.png';
@@ -137,10 +137,10 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Centio.Ai Conversational AI with Research and Task Automation"
-        description="This is AI-driven platform that enables versatile chat interactions, task automation, and in-depth research capabilities. With features like Regular Chat, Assistant tasks, and document management, it streamlines workflows for enhanced productivity."
+        title="Trustblock: Decentralized News Platform for Credible Journalism"
+        description="It is an innovative decentralized news platform aimed at tackling misinformation and fostering critical thinking in today's digital era. By harnessing blockchain technology, TrustBlock securely organizes news articles by topic, verifying news authenticity through a decentralized model and Subject matter experts contribute to the credibility assessment process, enhancing accuracy and impartiality. "
         buttonText="View project"
-        buttonLink="https://github.com/Priyesh GuptaRai5/Centio.AI"
+        buttonLink="https://github.com/priyeshgupta14/trust-block"
         model={{
           type: 'laptop',
           alt: 'Visual description of the pipeline workflow',

@@ -1,14 +1,15 @@
-__  __  __
-\ \ \ \ \/
- \ \/\ \
-  \/  \/
+  _____  
+ |     | 
+ |_____| 
+ |       
+ |       
 
 The humans.txt file explains the team, technology,
 and graphic assets behind this site humanstxt.org.
 
 _______________________________________________________________________________
 
-DESIGNER | デザイナー
+DESIGNER | 1000111
 
 Priyesh Gupta 
 Hand crafted design & web development
@@ -18,12 +19,12 @@ Figma
 Photoshop
 Blender
 
-twitter.com/priyeshmw
-github.com/priyeshmw
+twitter.com/rajpri8852
+github.com/priyeshgupta14
 
 _______________________________________________________________________________
 
-TECHNOLOGY | テクノロジー
+TECHNOLOGY | 1010100
 
 React
 Next.js
@@ -32,7 +33,7 @@ Framer Motion
 
 _______________________________________________________________________________
 
-FONTS | フォント
+FONTS | 101001
 
 Gotham
 Hiragino Kaku Gothic

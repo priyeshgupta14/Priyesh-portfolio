@@ -6,19 +6,19 @@ import styles from './IITB.module.css'; // Importing the module
 export default function EnsVision() {
   const tasks = [
     {
-      text: '• Employing advanced sentiment analysis with transformer-based models to enhance swing trading strategies in the Indian stock market.',
+      text: '• Designed deep learning models with 77% higher energy efficiency on the LIDC-IDRI dataset, maintaining accuracy in classification and segmentation.',
       keywords: ['Alchemy', 'Wagmi', 'Web3.js', 'Moralis', 'Ethers.js'],
     },
     {
-      text: '• Integrating multimodal data (social media sentiment, financial news, technical indicators, and fundamental analysis) for a comprehensive stock prediction system.',
+      text: '• Implemented automated training and testing procedures to ensure reproducible results.',
       keywords: ['quality', 'testing tasks', 'user base'],
     },
     {
-      text: '• Investigating the impact of optimized time series prediction models and robust feature selection on swing trading prediction accuracy.',
+      text: '• Applied model optimizations like pruning and quantization to reduce memory and computational requirements.',
       keywords: ['quality', 'testing tasks', 'user base'],
     },
     {
-      text: '• Preliminary results indicate the multimodal approach may significantly improve accuracy and reliability of swing trading predictions compared to traditional methods.',
+      text: '• Submitted research findings for publication in MICCAI 2024 proceedings under the E2MIP challenge, focusing on the impact of optimizations on model performance and resource usage.',
       keywords: ['quality', 'testing tasks', 'user base'],
     },
   ];
@@ -29,10 +29,10 @@ export default function EnsVision() {
         <div className={styles.titleContainer}>
           {/* Title */}
           <span className={styles.title}>
-          Research Intern <span className={styles.company}>- Robert Bosch Centre for Data Science and AI (IIT Madras)</span>
+          MLOps Intern <span className={styles.company}>- Dept of CSE, NIT Puducherry</span>
           </span>
           {/* Date */}
-          <span className={styles.date}>Jun 2024 - Present</span>
+          <span className={styles.date}>December 2023 - January 2024</span>
         </div>
         <div className={styles.taskList}>
           {/* Tasks Description 1 */}

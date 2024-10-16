@@ -6,6 +6,6 @@ addons.setConfig({
     ...themes.dark,
     // brandImage: 'https://priyeshgupta.com/icon.svg',
     brandTitle: 'Priyesh Gupta Components',
-    brandUrl: 'https://Priyesh Guptajain.cf',
+    brandUrl: 'https://priyeshgupta.netlify.app',
   },
 });
